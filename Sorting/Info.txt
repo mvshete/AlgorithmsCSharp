@@ -1,0 +1,33 @@
+Bubble Sort
+===========
+Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that 
+repeatedly steps through the list to be sorted, compares each pair of adjacent items and 
+swaps them if they are in the wrong order. 
+
+The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. 
+The algorithm, which is a comparison sort, is named for the way smaller elements "bubble" to the top of the list.
+
+Although the algorithm is simple, it is too slow and impractical for most problems even when 
+compared to insertion sort.
+ 
+It can be practical if the input is usually in sort order but may occasionally have some 
+out-of-order elements nearly in position.
+
+Heap Sort
+==========
+Heap is a special tree-based data structure. A binary tree is said to follow a heap data structure if
+
+1.It is a complete binary tree
+2.All nodes in the tree follow the property that they are greater than their children i.e.the largest element is 
+  at the root and both its children and smaller than the root and so on.Such a heap is called a max-heap.If instead 
+  all nodes are smaller than their children, it is called a min-heap
+
+Given an array
+
+1.Arrange the numbers in Binary tree
+2.For Max-HEAP start by heapifying the lowest smallest trees and gradually move up until we reach the root element.
+3.When tree satisfies Max-Heap property, then the largest item is stored at the root node.
+4.Remove the root element and put at the end of the array (nth position) 
+5.Put the last item of the tree (heap) at the vacant place.
+6.Reduce the size of the heap by 1 and heapify the root element again so that we have highest element at root.
+The process is repeated until all the items of the list is sorted.
