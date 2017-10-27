@@ -4,11 +4,9 @@ namespace Algorithms.Sorting
 {
   public class BubbleSort
   {
-    public static void PerformBubbleSort()
-    {
-      int[]  array = {23,1,12,6,2};
-
-      Console.WriteLine("Original Array");
+    public static void PerformBubbleSort(int[] array)
+    {    
+      Console.WriteLine("Bubble Sort :: Original Array");
 
       foreach (var item in array)
       {
@@ -28,7 +26,7 @@ namespace Algorithms.Sorting
           }
       }
 
-      Console.WriteLine("\nSorted Array");
+      Console.WriteLine("\nBubble Sort :: Sorted Array");
 
       foreach (var item in array)
       {
