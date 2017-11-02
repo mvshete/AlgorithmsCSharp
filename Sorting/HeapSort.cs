@@ -4,20 +4,15 @@ namespace Algorithms.Sorting
   public class HeapSort
   {
     public static void PerformHeapSort(int[] array)
-    {     
+    {
+      Helper.Print(array, "Heap Sort", true);
+
       int arraySize = array.Length;
-
-      Console.WriteLine("Heap Sort :: Original Array");
-
-      foreach (var item in array)
-      {
-        Console.Write(item + " ");
-      }
 
       // Build max heap
       for (int index = arraySize / 2 - 1; index >= 0; index--)
       {
-        Heapify(ref array,arraySize, index);
+        Heapify(ref array, arraySize, index);
       }
 
 
@@ -27,17 +22,12 @@ namespace Algorithms.Sorting
         int temp = array[0];
         array[0] = array[index];
         array[index] = temp;
-                
+
         // Heapify root element
         Heapify(ref array, index, 0);
       }
 
-      Console.WriteLine("\nHeap Sort :: Sorted Array");
-
-      foreach (var item in array)
-      {
-        Console.Write(item + " ");
-      }
+       Helper.Print(array, "Heap Sort", false);
     }
 
     private static void Heapify(ref int[] array, int n, int i)

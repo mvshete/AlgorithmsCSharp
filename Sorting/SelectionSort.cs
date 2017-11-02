@@ -6,14 +6,9 @@ namespace Algorithms.Sorting
   {
     public static void PerformSelectionSort(int[] array)
     {
+      Helper.Print(array, "Selection Sort", true);
+
       int arraySize = array.Length;
-
-      Console.WriteLine("Selection Sort :: Original Array");
-
-      foreach (var item in array)
-      {
-        Console.Write(item + " ");
-      }
 
       for (var step = 0; step < array.Length; step++)
       {
@@ -28,12 +23,7 @@ namespace Algorithms.Sorting
         }
       }
 
-      Console.WriteLine("\n Selection Sort :: Sorted Array");
-
-      foreach (var item in array)
-      {
-        Console.Write(item + " ");
-      }
+      Helper.Print(array, "Selection Sort", false);
     }
 
   }

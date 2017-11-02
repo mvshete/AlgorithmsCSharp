@@ -6,12 +6,7 @@ namespace Algorithms.Sorting
   {
     public static void PerformBubbleSort(int[] array)
     {    
-      Console.WriteLine("Bubble Sort :: Original Array");
-
-      foreach (var item in array)
-      {
-          Console.Write(item +" ");
-      }
+      Helper.Print(array,"Bubble Sort", true);
 
       for (int pass = 0; pass <= array.Length-2; pass++)
       {
@@ -26,12 +21,7 @@ namespace Algorithms.Sorting
           }
       }
 
-      Console.WriteLine("\nBubble Sort :: Sorted Array");
-
-      foreach (var item in array)
-      {
-          Console.Write(item +" ");
-      }
+      Helper.Print(array,"Bubble Sort", false);
 
     }
   }
