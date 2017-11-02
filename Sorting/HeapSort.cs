@@ -3,64 +3,64 @@ namespace Algorithms.Sorting
 {
   public class HeapSort
   {
-    public static void PerformHeapSort(int[] arr)
+    public static void PerformHeapSort(int[] array)
     {     
-      int n = arr.Length;
+      int arraySize = array.Length;
 
       Console.WriteLine("Heap Sort :: Original Array");
 
-      foreach (var item in arr)
+      foreach (var item in array)
       {
         Console.Write(item + " ");
       }
 
       // Build max heap
-      for (int i = n / 2 - 1; i >= 0; i--)
+      for (int index = arraySize / 2 - 1; index >= 0; index--)
       {
-        Heapify(ref arr, n, i);
+        Heapify(ref array,arraySize, index);
       }
 
 
       // Heap sort
-      for (int i = n - 1; i >= 0; i--)
+      for (int index = arraySize - 1; index >= 0; index--)
       {
-        int temp = arr[0];
-        arr[0] = arr[i];
-        arr[i] = temp;
-
+        int temp = array[0];
+        array[0] = array[index];
+        array[index] = temp;
+                
         // Heapify root element
-        Heapify(ref arr, i, 0);
+        Heapify(ref array, index, 0);
       }
 
       Console.WriteLine("\nHeap Sort :: Sorted Array");
 
-      foreach (var item in arr)
+      foreach (var item in array)
       {
         Console.Write(item + " ");
       }
     }
 
-    private static void Heapify(ref int[] arr, int n, int i)
+    private static void Heapify(ref int[] array, int n, int i)
     {
       // Find largest among root, left child and right child
       int largest = i;
-      int l = 2 * i + 1;
-      int r = 2 * i + 2;
+      int left = 2 * i + 1;
+      int right = 2 * i + 2;
 
-      if (l < n && arr[l] > arr[largest])
-        largest = l;
+      if (left < n && array[left] > array[largest])
+        largest = left;
 
-      if (r < n && arr[r] > arr[largest])
-        largest = r;
+      if (right < n && array[right] > array[largest])
+        largest = right;
 
       // Swap and continue heapifying if root is not largest
       if (largest != i)
       {
-        int swap = arr[i];
-        arr[i] = arr[largest];
-        arr[largest] = swap;
+        int swap = array[i];
+        array[i] = array[largest];
+        array[largest] = swap;
 
-        Heapify(ref arr, n, largest);
+        Heapify(ref array, n, largest);
       }
     }
 
