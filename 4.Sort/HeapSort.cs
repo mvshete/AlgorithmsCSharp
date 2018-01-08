@@ -1,5 +1,5 @@
 using System;
-namespace Algorithms.Sorting
+namespace Algorithms.Sort
 {
   public class HeapSort
   {

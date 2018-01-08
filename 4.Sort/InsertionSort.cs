@@ -1,4 +1,4 @@
-namespace Algorithms.Sorting
+namespace Algorithms.Sort
 {
   public class InsertionSort
   {
