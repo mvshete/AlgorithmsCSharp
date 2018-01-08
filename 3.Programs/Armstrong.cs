@@ -1,0 +1,33 @@
+﻿/*
+
+An Armstrong number of three digits is an integer such that the
+sum of the cubes of its digits is equal to the number itself.
+e.g. 371
+*/
+
+namespace Algorithms.Programs
+{
+    public class Armstrong
+    {
+        public static bool IsArmstrongNumber(int number)
+        {           
+            int reminder = 0;
+            int sum = 0;
+
+            for (int i = number; i > 0 ; i = i/10)
+            {
+                reminder = i % 10;
+                sum = sum + reminder * reminder * reminder;
+            }
+
+            if (sum == number)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}

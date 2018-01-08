@@ -1,5 +1,5 @@
 ﻿using System;
-using Algorithms.Strings;
+using Algorithms.Programs;
 
 namespace AlgorithmsCSharp
 {
@@ -7,8 +7,7 @@ namespace AlgorithmsCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(
-          WordCount.GetWordCount("rthfg dfhgjdfhg jhgkjf gkjdfhgj dhgjkd "));
+            
             
         }
     }
