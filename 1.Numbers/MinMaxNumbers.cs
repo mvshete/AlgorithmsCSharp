@@ -1,4 +1,5 @@
 using System;
+//Swap min and max element in integer array
 
 namespace Algorithms.Numbers
 {

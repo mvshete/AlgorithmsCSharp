@@ -7,7 +7,7 @@ namespace AlgorithmsCSharp
     {
         static void Main(string[] args)
         {
-            
+            Algorithms.Numbers.MinMaxNumbers.SwapMinMax();
             
         }
     }

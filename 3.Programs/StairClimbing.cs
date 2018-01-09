@@ -1,4 +1,5 @@
 ﻿using System;
+//determine total ways stairs can be climbed
 
 namespace Algorithms.Programs
 {

@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
+//Find missing number in a sequence  
+
+
 namespace Algorithms.Numbers
 {
   public class MissingNumber

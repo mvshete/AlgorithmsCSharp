@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 
+//Determine if a string has all unique characters
+
 namespace Algorithms.Strings
 {
     public class UniqueChars
